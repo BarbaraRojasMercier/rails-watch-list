@@ -14,8 +14,8 @@ class ListsController < ApplicationController
     
     def create
       @list = List.new(List_params)
-    if List.save
-      redirect_to List_path(@list)
+    if @list.save
+      redirect_to list_path(@list)
     else
       render "new"
     end
@@ -24,7 +24,7 @@ class ListsController < ApplicationController
     
       private
     
-      def list_paramas
-        params.require(:list).permit(params[:name, :created_at, :updated_at])
+      def list_params
+        params.require(:list).permit(params[:name])
       end
     
