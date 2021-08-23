@@ -5,6 +5,7 @@ ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4'
+gem 'cloudinary', '~> 1.16.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -38,6 +39,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'dotenv-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
